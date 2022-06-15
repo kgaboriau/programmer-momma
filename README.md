@@ -1,4 +1,6 @@
 # programmer-momma
+TODO - a little about the project
+
 
 ## Project setup
 ```
