@@ -1,0 +1,28 @@
+/* screen sizes */
+$breakpoint-phone: 360px;
+$breakpoint-tablet: 650px;
+$breakpoint-desktop: 1280px;
+
+/* Mixin used below to define from and up */
+@mixin break-from-and-up($min) {
+  @media screen and (min-width: $min) {
+    @content;
+  }
+}
+
+/* Mixings to manage css from specified sizes and up */
+@mixin break-phone-and-up {
+  @include break-from-and-up($breakpoint-phone) {
+    @content;
+  }
+}
+@mixin break-tablet-and-up {
+  @include break-from-and-up($breakpoint-tablet) {
+    @content;
+  }
+}
+@mixin break-desktop-and-up {
+  @include break-from-and-up($breakpoint-desktop) {
+    @content;
+  }
+}
