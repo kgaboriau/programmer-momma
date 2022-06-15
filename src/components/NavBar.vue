@@ -36,7 +36,7 @@ export default {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  background-color: $light-accent;
+  background-color: $primary-brand-colour;
 
   max-height: 20px;
   padding: 20px;
@@ -55,7 +55,7 @@ export default {
       font-family: 'Source Code Pro', monospace;
       padding-left: 10px;
       visibility: hidden;
-      color: $main-brand-colour;
+      color: $primary-light-shade;
     }
   }
 
@@ -68,16 +68,16 @@ export default {
 
     a {
       text-decoration-line: none;
-      font-size: 1.5em;
+      font-size: 1.3em;
       font-weight: bold;
-      color: $dark-shade;
+      color: $secondary-brand-colour;
       padding: 5px;
       margin: 0px 10px;
     }
 
     a.router-link-exact-active {
       text-decoration-line: underline;
-      color: $secondary-brand-colour;
+      color: $secondary-light;
     }
   }
 
@@ -92,7 +92,7 @@ export default {
 @include break-tablet-and-up {
   .nav-bar {
     max-height: 40px;
-    padding: 30px;
+    padding: 25px;
 
     .center-container {
       visibility: visible;

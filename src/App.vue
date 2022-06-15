@@ -27,7 +27,7 @@ html, body {
   font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $text-main;
+  color: $primary-text;
   font-size: 16px;
 
   @include break-tablet-and-up {
