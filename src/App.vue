@@ -1,16 +1,45 @@
 <template lang="pug">
-#app
+#app(:style="appBkg")
   NavBar
   router-view
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue'
+import homeBkg from './assets/webdev_bkg.jpeg'
 
 export default {
   name: 'App',
   components: {
     NavBar
+  },
+  data() {
+    return {
+      appBkg: {
+        'background-image': `url(${homeBkg})`
+      },
+      bkgMap: {
+        'blog': 'linear-gradient(to bottom right, #00E9F2, #1068B0, #00133E)',
+        'home': `url(${homeBkg})`
+      }
+    }
+  },
+  computed: {
+    routeName() {
+      return this.$route.name
+    }
+  },
+  watch: {
+    routeName(name) {
+      this.changeRouteBackground(name)
+    }
+  },
+  methods: {
+    changeRouteBackground(name) {
+      this.appBkg = {
+        'background-image': this.bkgMap[name]
+      }
+    }
   }
 }
 </script>
@@ -35,6 +64,13 @@ html, body {
   }
   @include break-desktop-and-up {
     font-size: 20px;
+  }
+
+  #app {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
   }
 }
 </style>

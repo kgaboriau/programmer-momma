@@ -2,12 +2,10 @@
 .nav-bar
   .left-container
     img.logo(src="../assets/logo.svg", alt="Vue logo", draggable="false")
-    h3.title {{'ProgrammerMomma'}}
-  .center-container
-    router-link(to="/") {{'Home'}}
-    router-link(to="/about") {{'About'}}
+    h2.title {{'ProgrammerMomma'}}
   .right-container
-    NavBtn
+    router-link(to="/") {{'Home'}}
+    router-link(to="/blog") {{'Shower Thoughts'}}
 </template>
 
 <script>
@@ -36,9 +34,8 @@ export default {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  background-color: $primary-brand-colour;
 
-  max-height: 20px;
+  height: 20vh;
   padding: 20px;
 
   .left-container {
@@ -55,29 +52,7 @@ export default {
       font-family: 'Source Code Pro', monospace;
       padding-left: 10px;
       visibility: hidden;
-      color: $primary-light-shade;
-    }
-  }
-
-  .center-container {
-    @include flex-row;
-    justify-content: center;
-    flex: 1 1 0;
-
-    visibility: hidden;
-
-    a {
-      text-decoration-line: none;
-      font-size: 1.3em;
-      font-weight: bold;
-      color: $secondary-brand-colour;
-      padding: 5px;
-      margin: 0px 10px;
-    }
-
-    a.router-link-exact-active {
-      text-decoration-line: underline;
-      color: $secondary-light;
+      color: $primary-brand-colour;
     }
   }
 
@@ -86,21 +61,24 @@ export default {
     justify-content: right;
     flex: 1 1 0;
 
-    visibility: visible;
+    a {
+      text-decoration-line: none;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: $secondary-light;
+      padding: 5px;
+      margin: 0px 10px;
+    }
+
+    a.router-link-exact-active {
+      color: $secondary-brand-colour;
+    }
   }
 }
 @include break-tablet-and-up {
   .nav-bar {
     max-height: 40px;
     padding: 25px;
-
-    .center-container {
-      visibility: visible;
-    }
-
-    .right-container {
-      visibility: hidden;
-    }
   }
 }
 
