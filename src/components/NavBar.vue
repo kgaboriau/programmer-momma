@@ -75,7 +75,7 @@ export default {
     }
   }
 }
-@include break-tablet-and-up {
+@include break-tablet-small-and-up {
   .nav-bar {
     max-height: 40px;
     padding: 25px;

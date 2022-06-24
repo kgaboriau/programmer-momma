@@ -59,7 +59,7 @@ html, body {
   color: $primary-text;
   font-size: 16px;
 
-  @include break-tablet-and-up {
+  @include break-tablet-small-and-up {
     font-size: 18px;
   }
   @include break-desktop-and-up {

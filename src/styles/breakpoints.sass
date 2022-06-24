@@ -1,6 +1,8 @@
 /* screen sizes */
 $breakpoint-phone: 360px
-$breakpoint-tablet: 650px
+$breakpoint-tablet-small: 650px
+$breakpoint-tablet-medium: 750px
+$breakpoint-tablet-large: 850px
 $breakpoint-desktop: 1280px
 
 /* Mixin used below to define from and up */
@@ -13,8 +15,16 @@ $breakpoint-desktop: 1280px
   @include break-from-and-up($breakpoint-phone)
     @content
 
-@mixin break-tablet-and-up
-  @include break-from-and-up($breakpoint-tablet)
+@mixin break-tablet-small-and-up
+  @include break-from-and-up($breakpoint-tablet-small)
+    @content
+
+@mixin break-tablet-medium-and-up
+  @include break-from-and-up($breakpoint-tablet-medium)
+    @content
+
+@mixin break-tablet-large-and-up
+  @include break-from-and-up($breakpoint-tablet-large)
     @content
 
 @mixin break-desktop-and-up
