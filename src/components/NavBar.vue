@@ -35,7 +35,6 @@ export default {
   align-items: center;
   justify-content: space-between;
 
-  height: 20vh;
   padding: 20px;
 
   .left-container {

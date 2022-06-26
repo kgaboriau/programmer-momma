@@ -48,6 +48,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import 'src/styles/colours.sass';
 @import 'src/styles/breakpoints.sass';
+@import 'src/styles/flexbox.sass';
 
 html, body {
   height: 100%;
@@ -71,6 +72,8 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right top;
+
+    @include flex-column;
   }
 }
 </style>

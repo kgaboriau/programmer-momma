@@ -31,6 +31,8 @@ export default {
     @include flex-column;
     justify-content: bottom;
     align-items: flex-end;
+
+    overflow-y: scroll;
     //max-width: 35vw;
 
     padding: 30px 30px 0 30px;
